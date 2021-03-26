@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ElectronicMarketAppModelStoreContainer" CdmEntityContainer="ElectronicMarketAppEntities">
+    <EntitySetMapping Name="Goods">
+      <EntityTypeMapping TypeName="ElectronicMarketAppModel.Good">
+        <MappingFragment StoreEntitySet="Goods">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDG" ColumnName="IDG" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Expire_Date" ColumnName="Expire_Date" />
+          <ScalarProperty Name="IDOffers" ColumnName="IDOffers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Offers">
+      <EntityTypeMapping TypeName="ElectronicMarketAppModel.Offer">
+        <MappingFragment StoreEntitySet="Offers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDTyG" ColumnName="IDTyG" />
+          <ScalarProperty Name="Offer1" ColumnName="Offer" />
+          <ScalarProperty Name="size" ColumnName="size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registers">
+      <EntityTypeMapping TypeName="ElectronicMarketAppModel.Register">
+        <MappingFragment StoreEntitySet="Register">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ShopeName" ColumnName="ShopeName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeGoods">
+      <EntityTypeMapping TypeName="ElectronicMarketAppModel.TypeGood">
+        <MappingFragment StoreEntitySet="TypeGoods">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GoodsWithOffers">
+      <EntityTypeMapping TypeName="ElectronicMarketAppModel.GoodsWithOffer">
+        <MappingFragment StoreEntitySet="GoodsWithOffers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="SizePiece" ColumnName="SizePiece" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Offer" ColumnName="Offer" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Expire_Date" ColumnName="Expire_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GoodsWithoutOffers">
+      <EntityTypeMapping TypeName="ElectronicMarketAppModel.GoodsWithoutOffer">
+        <MappingFragment StoreEntitySet="GoodsWithoutOffers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Expire_Date" ColumnName="Expire_Date" />
+          <ScalarProperty Name="IDOffers" ColumnName="IDOffers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="ElectronicMarketAppModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

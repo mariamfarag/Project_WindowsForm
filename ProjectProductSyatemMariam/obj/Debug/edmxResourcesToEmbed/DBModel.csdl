@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ElectronicMarketAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Good">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDG" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Expire_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IDOffers" Type="Int32" />
+    <NavigationProperty Name="Bills" Relationship="Self.FK_Goods" FromRole="Goods" ToRole="Bills" />
+    <NavigationProperty Name="Offer" Relationship="Self.FK_IDOffers" FromRole="Goods" ToRole="Offers" />
+    <NavigationProperty Name="TypeGood" Relationship="Self.FK_IDTYPE" FromRole="Goods" ToRole="TypeGoods" />
+  </EntityType>
+  <EntityType Name="Offer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDTyG" Type="Int32" />
+    <Property Name="Offer1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="size" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Goods" Relationship="Self.FK_IDOffers" FromRole="Offers" ToRole="Goods" />
+    <NavigationProperty Name="TypeGood" Relationship="Self.FK_IDTYG" FromRole="Offers" ToRole="TypeGoods" />
+  </EntityType>
+  <EntityType Name="Register">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ShopeName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Bills" Relationship="Self.FK_IDTRADE" FromRole="Register" ToRole="Bills" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TypeGood">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="90" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Goods" Relationship="Self.FK_IDTYPE" FromRole="TypeGoods" ToRole="Goods" />
+    <NavigationProperty Name="Offers" Relationship="Self.FK_IDTYG" FromRole="TypeGoods" ToRole="Offers" />
+  </EntityType>
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="IDTrade" />
+      <PropertyRef Name="IDGoods" />
+    </Key>
+    <Property Name="IDTrade" Type="Int32" Nullable="false" />
+    <Property Name="IDGoods" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="PriceForPic" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DatePayment" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Good" Relationship="Self.FK_Goods" FromRole="Bills" ToRole="Goods" />
+    <NavigationProperty Name="Register" Relationship="Self.FK_IDTRADE" FromRole="Bills" ToRole="Register" />
+  </EntityType>
+  <Association Name="FK_Goods">
+    <End Role="Goods" Type="Self.Good" Multiplicity="1" />
+    <End Role="Bills" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Goods">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bills">
+        <PropertyRef Name="IDGoods" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IDOffers">
+    <End Role="Offers" Type="Self.Offer" Multiplicity="0..1" />
+    <End Role="Goods" Type="Self.Good" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Offers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Goods">
+        <PropertyRef Name="IDOffers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IDTYPE">
+    <End Role="TypeGoods" Type="Self.TypeGood" Multiplicity="1" />
+    <End Role="Goods" Type="Self.Good" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeGoods">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Goods">
+        <PropertyRef Name="IDG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IDTYG">
+    <End Role="TypeGoods" Type="Self.TypeGood" Multiplicity="0..1" />
+    <End Role="Offers" Type="Self.Offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeGoods">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Offers">
+        <PropertyRef Name="IDTyG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IDTRADE">
+    <End Role="Register" Type="Self.Register" Multiplicity="1" />
+    <End Role="Bills" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Register">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bills">
+        <PropertyRef Name="IDTrade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ElectronicMarketAppEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Goods" EntityType="Self.Good" />
+    <EntitySet Name="Offers" EntityType="Self.Offer" />
+    <EntitySet Name="Registers" EntityType="Self.Register" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TypeGoods" EntityType="Self.TypeGood" />
+    <EntitySet Name="Bills" EntityType="Self.Bill" />
+    <AssociationSet Name="FK_Goods" Association="Self.FK_Goods">
+      <End Role="Goods" EntitySet="Goods" />
+      <End Role="Bills" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IDOffers" Association="Self.FK_IDOffers">
+      <End Role="Offers" EntitySet="Offers" />
+      <End Role="Goods" EntitySet="Goods" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IDTYPE" Association="Self.FK_IDTYPE">
+      <End Role="TypeGoods" EntitySet="TypeGoods" />
+      <End Role="Goods" EntitySet="Goods" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IDTYG" Association="Self.FK_IDTYG">
+      <End Role="TypeGoods" EntitySet="TypeGoods" />
+      <End Role="Offers" EntitySet="Offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IDTRADE" Association="Self.FK_IDTRADE">
+      <End Role="Register" EntitySet="Registers" />
+      <End Role="Bills" EntitySet="Bills" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

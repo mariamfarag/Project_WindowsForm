@@ -1,0 +1,40 @@
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\bin\Debug\ProjectProductSyatemMariam.exe.config
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\bin\Debug\ProjectProductSyatemMariam.exe
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\bin\Debug\ProjectProductSyatemMariam.pdb
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.csprojAssemblyReference.cache
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.Form1.resources
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.Properties.Resources.resources
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.csproj.GenerateResource.cache
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.csproj.CoreCompileInputs.cache
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.exe
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.pdb
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.Bills.resources
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.Login.resources
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.Register.resources
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.Admin.resources
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.DeleteProduct.resources
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.InsertProduct.resources
+C:\Users\ebram\source\repos\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.UpdateProduct.resources
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\bin\Debug\ProjectProductSyatemMariam.exe.config
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\bin\Debug\ProjectProductSyatemMariam.exe
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\bin\Debug\ProjectProductSyatemMariam.pdb
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.csprojAssemblyReference.cache
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.Admin.resources
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.DeleteProduct.resources
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.InsertProduct.resources
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.Properties.Resources.resources
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.UpdateProduct.resources
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.csproj.GenerateResource.cache
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.csproj.CoreCompileInputs.cache
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.exe
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.pdb
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.Admin2.resources
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.LoginUser.resources
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.RegisterUser.resources
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\bin\Debug\EntityFramework.dll
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\bin\Debug\EntityFramework.SqlServer.dll
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\bin\Debug\EntityFramework.xml
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\bin\Debug\EntityFramework.SqlServer.xml
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.csproj.CopyComplete
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.TraderMarket.resources
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.BillsUser.resources

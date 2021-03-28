@@ -188,6 +188,7 @@ namespace ProjectProductSyatemMariam
             this.btnShowBills.TabIndex = 7;
             this.btnShowBills.Text = "Show Bills";
             this.btnShowBills.UseVisualStyleBackColor = false;
+            this.btnShowBills.Click += new System.EventHandler(this.btnShowBills_Click);
             // 
             // richTextBox1
             // 

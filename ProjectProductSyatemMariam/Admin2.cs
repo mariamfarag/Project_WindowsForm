@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +16,8 @@ namespace ProjectProductSyatemMariam
     public partial class Admin2 : Form
     {
         Good Good = new Good();
-        ElectronicMarketAppEntities2 Context = new ElectronicMarketAppEntities2();
+        ElectronicMarketAppEntities3 Context = new ElectronicMarketAppEntities3();
+       // LoginUser login = new LoginUser();
         public Admin2()
         {
             InitializeComponent();
@@ -26,21 +29,28 @@ namespace ProjectProductSyatemMariam
             FillDataGradView();
             //DateTime expirationDate = DateTime.Now.AddDays(21);
             //DateTime now = DateTime.Now;
-
             //TimeSpan diff = expirationDate - now;
-
             //int days = diff.Days; // This would give 20
+            //DateTime _expiryDate = DateTime.Now + TimeSpan.FromDays(30);
+
+            //ArrayList arrayList = new ArrayList();
             foreach (var item in Context.Goods)
-            { 
-                if(item.Expire_Date<DateTime.Now)
+            {
+                if (item.Expire_Date < DateTime.Now)
+                {
+                     //   arrayList.Add(item.ToString());
                     MessageBox.Show($"All Expire Product \n Name :{item.Name}\n Expire Date :{item.Expire_Date}\n");
+                }
+
             }
+           // MessageBox.Show($"All Expire Product Name :{arrayList}\n");
+
             //var expire = (from ee in Context.Goods
             //              where ee.Expire_Date < DateTime.Now//.AddDays(20)
             //              select ee).FirstOrDefault();
             //if (expire != null)
             //        MessageBox.Show($"All Expire Product \n Name :{expire.Name}\n Expire Date :{expire.Expire_Date}\n");
-               
+
         }
 
         //===========
@@ -60,7 +70,9 @@ namespace ProjectProductSyatemMariam
         //====================
         private void Admin2_Load(object sender, EventArgs e)
         {
+           // login.Close();
             Clear();
+
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)

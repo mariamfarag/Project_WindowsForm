@@ -16,12 +16,13 @@ namespace ProjectProductSyatemMariam
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new TraderMarket());
-           Application.Run(new Admin2());
+           // Application.Run(new TraderMarket());
+            //Application.Run(new Admin2());
             //Application.Run(new Admin());
-           //Application.Run(new LoginUser());
+            //Application.Run(new LoginUser());
+            //Application.Run(new Home());
             //Application.Run(new RegisterUser());
-            //Application.Run(new Bills());
+            Application.Run(new BillsUser());
         }
     }
 }

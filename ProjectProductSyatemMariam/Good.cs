@@ -29,9 +29,9 @@ namespace ProjectProductSyatemMariam
         public System.DateTime Expire_Date { get; set; }
         public Nullable<int> IDOffers { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Bill> Bills { get; set; }
         public virtual Offer Offer { get; set; }
         public virtual TypeGood TypeGood { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Bill> Bills { get; set; }
     }
 }

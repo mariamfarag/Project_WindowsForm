@@ -14,11 +14,12 @@ namespace ProjectProductSyatemMariam
     
     public partial class Bill
     {
-        public int IDTrade { get; set; }
+        public int Id { get; set; }
         public int IDGoods { get; set; }
-        public Nullable<int> Quantity { get; set; }
-        public Nullable<decimal> PriceForPic { get; set; }
-        public Nullable<System.DateTime> DatePayment { get; set; }
+        public int Quantity { get; set; }
+        public decimal PriceForPic { get; set; }
+        public System.DateTime DatePayment { get; set; }
+        public int IDTrade { get; set; }
     
         public virtual Good Good { get; set; }
         public virtual Register Register { get; set; }

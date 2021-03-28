@@ -12,7 +12,7 @@ namespace ProjectProductSyatemMariam
 {
     public partial class RegisterUser : Form
     {
-        ElectronicMarketAppEntities2 context = new ElectronicMarketAppEntities2();
+        ElectronicMarketAppEntities3 context = new ElectronicMarketAppEntities3();
         TraderMarket TraderMarket = new TraderMarket();
         public RegisterUser()
         {
@@ -35,8 +35,8 @@ namespace ProjectProductSyatemMariam
                 xx.ShopeName = txtNameShop.Text;
                 context.Registers.Add(xx);
                 context.SaveChanges();
-                MessageBox.Show("Thanks For Registraion");
-               // TraderMarket.ShowDialog();
+                MessageBox.Show($"Thanks For Registraion {xx.FName} {xx.LName}\nYour ID :{xx.ID}");
+                TraderMarket.ShowDialog();
             }
             else
             {

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d12db40d4986445f80eb2abfc19a0e22" Name="Diagram1">
+        <EntityTypeShape EntityType="ElectronicMarketAppModel.Bill" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMarketAppModel.Good" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMarketAppModel.Offer" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMarketAppModel.Register" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMarketAppModel.sysdiagram" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMarketAppModel.TypeGood" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="ElectronicMarketAppModel.FK_IDOffers" ManuallyRouted="false" />
+        <AssociationConnector Association="ElectronicMarketAppModel.FK_IDTYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="ElectronicMarketAppModel.FK_IDTYG" ManuallyRouted="false" />
+        <AssociationConnector Association="ElectronicMarketAppModel.FK_Bill_Goods" />
+        <AssociationConnector Association="ElectronicMarketAppModel.FK_Bill_Register" />
+        <EntityTypeShape EntityType="ElectronicMarketAppModel.BillForYou" Width="1.5" PointX="7.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

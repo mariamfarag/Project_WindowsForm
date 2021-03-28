@@ -13,8 +13,10 @@ namespace ProjectProductSyatemMariam
     public partial class LoginUser : Form
     {
         Register register = new Register();
-        ElectronicMarketAppEntities2 context = new ElectronicMarketAppEntities2();
+        ElectronicMarketAppEntities3 context = new ElectronicMarketAppEntities3();
         TraderMarket trader = new TraderMarket();
+        Admin2 admin = new Admin2();
+        //LoginUser login = new LoginUser();
         public LoginUser()
         {
             InitializeComponent();
@@ -34,8 +36,22 @@ namespace ProjectProductSyatemMariam
                            && ee.Password == txtPassword.Text
                            select ee).FirstOrDefault();
                 if(log!=null)
-                MessageBox.Show("Hello in Marker Application");
-                trader.ShowDialog();
+                {
+                    if(log.ID==1)
+                    {
+                        MessageBox.Show($"Hello in Marker Application: {log.FName} {log.LName}");
+                       //// login.Close();
+                        admin.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Hello in Marker Application: {log.FName} {log.LName}\n Your ID :{log.ID}");
+                        ////login.Close();
+                        trader.ShowDialog();
+                    }
+                }
+               
+                
                // this.Close();
             }
             else

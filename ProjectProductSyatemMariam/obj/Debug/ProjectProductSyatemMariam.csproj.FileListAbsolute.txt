@@ -38,3 +38,4 @@ E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProdu
 E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.csproj.CopyComplete
 E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.TraderMarket.resources
 E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.BillsUser.resources
+E:\iti_3_months\ITI Projects Graduation\المشروع الثالث\ProjectProductSyatemMariam\ProjectProductSyatemMariam\obj\Debug\ProjectProductSyatemMariam.Home.resources

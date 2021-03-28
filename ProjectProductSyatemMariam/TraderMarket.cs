@@ -13,8 +13,9 @@ namespace ProjectProductSyatemMariam
 {
     public partial class TraderMarket : Form
     {
-        ElectronicMarketAppEntities2 context = new ElectronicMarketAppEntities2();
+        ElectronicMarketAppEntities3 context = new ElectronicMarketAppEntities3();
         //DBModels2 context = new DBModels2();
+        public static string SetValueForText1 = "";
         public TraderMarket()
         {
             InitializeComponent();
@@ -47,37 +48,59 @@ namespace ProjectProductSyatemMariam
 
             if (txQuantity.Text!=string.Empty&& comboBoxProduct.SelectedItem!=null)
             {
-                var xx = (from ee in context.Bills
-                          select ee).FirstOrDefault();
+               
                 var xxx = (from eee in context.Goods
-                           where eee.IDG == comboBoxProduct.SelectedIndex
+                           where eee.Name == comboBoxProduct.SelectedItem.ToString()
                            select eee).FirstOrDefault();
                 richTextBox1.AppendText("Name : "+comboBoxProduct.Text.Trim()+"   ");
                 richTextBox1.AppendText("Quantity : "+txQuantity.Text.Trim() + "\n");
-
-                if( xxx.IDG==comboBoxProduct.SelectedIndex)
+                if (xxx != null)
                 {
-                   // xx.IDGoods = comboBoxProduct.SelectedIndex;
-                    xx.Quantity = Convert.ToInt32(txQuantity.Text.Trim());
-                    xx.PriceForPic = Convert.ToInt32(txQuantity.Text.Trim()) * xxx.Price;
-                    xx.DatePayment = DateTime.Now;
-                    //xx.IDTrade = Convert.ToInt32(txtID.Text.Trim());
-                   // context.SaveChanges();
+                    Bill bill = new Bill();
+                    //if (xxx.ID == comboBoxProduct.SelectedIndex)
+                    //{
                     if (xxx.Quantity > Convert.ToInt32(txQuantity.Text.Trim()))
                     {
-                        xxx.Quantity = Convert.ToInt32(xx.Quantity) - Convert.ToInt32(txQuantity.Text.Trim());
+                        xxx.Quantity = Convert.ToInt32(xxx.Quantity) - Convert.ToInt32(txQuantity.Text.Trim());
+                        //context.SaveChanges();
                     }
-                  // context.Entry(xx).State = EntityState.Modified;
-                    context.Bills.Add(xx);
-                    context.SaveChanges();
+                    bill.IDGoods = xxx.IDG;// comboBoxProduct.SelectedIndex;
+                    bill.Quantity = Convert.ToInt32(txQuantity.Text.Trim());
+                    bill.PriceForPic = Convert.ToInt32(txQuantity.Text.Trim()) * xxx.Price;
+                    bill.DatePayment = DateTime.Now;
+                    bill.IDTrade = Convert.ToInt32(txtID.Text.Trim());
+                        context.Bills.Add(bill);
+                        context.SaveChanges();
+                    //}
                 }
-
             }
         }
 
         private void dataGridViewShowAllData_DoubleClick(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnShowBills_Click(object sender, EventArgs e)
+        {
+            //BillsUser billsUser = new BillsUser();
+            //Register register = new Register();
+            //string name,address;
+            //if(register.ID==Convert.ToInt32( txtID.Text))
+            //{
+            //    name = register.FName;
+            //    address = register.Address;
+            //    billsUser.PassValue(name,address);
+            //    billsUser.ShowDialog();
+            //}
+            if (txtID != null)
+            {
+                SetValueForText1 = txtID.Text;
+                BillsUser frm2 = new BillsUser();
+                frm2.Show();
+            }
+            else
+                MessageBox.Show("Enter Your Id Please");
         }
     }
 }

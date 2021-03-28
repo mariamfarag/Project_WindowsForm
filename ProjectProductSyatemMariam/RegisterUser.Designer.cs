@@ -100,7 +100,7 @@ namespace ProjectProductSyatemMariam
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.White;
             this.btnRegister.Location = new System.Drawing.Point(140, 449);
@@ -318,7 +318,7 @@ namespace ProjectProductSyatemMariam
             this.Controls.Add(this.lbLName);
             this.Controls.Add(this.btnRegister);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "RegisterUser";
             this.Text = "RegisterUser";
             this.Load += new System.EventHandler(this.RegisterUser_Load);
